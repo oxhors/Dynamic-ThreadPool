@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: dynamic-thread-pool-test-app
+  profiles:
+#    指定生效的配置文件
+    active: dev
