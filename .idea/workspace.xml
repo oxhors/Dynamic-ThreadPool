@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd6bb329-f714-42c8-9798-84af30bf137f" name="更改" comment="" />
+    <list default="true" id="dd6bb329-f714-42c8-9798-84af30bf137f" name="更改" comment="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块">
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/model/ThreadPoolConfigEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/valobj/RegistryEnumVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/registry/IRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/registry/redis/RedisRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/trigger/job/ThreadPoolDataReportJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/DynamicThreadPoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/DynamicThreadPoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/IDynamicThreadPoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/IDynamicThreadPoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/model/ThreadPoolEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/org/wx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/org/wx/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,44 +28,59 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2hlrAb8VvYzohKDUY4LpK8Yndkr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/javaprojects/learning/wxRPC/dynamic-thread-pool/dynamic-thread-pool-test/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.31839082",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/javaprojects/learning/wxRPC/dynamic-thread-pool&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31839082&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaprojects\learning\wxRPC\dynamic-thread-pool\dynamic-thread-pool-test\src\test" />
       <recent name="D:\javaprojects\learning\wxRPC\dynamic-thread-pool\dynamic-thread-pool-test\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -96,20 +126,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718179363841</updated>
-      <workItem from="1718179364899" duration="5538000" />
+      <workItem from="1718179364899" duration="12644000" />
+      <workItem from="1718193169459" duration="8104000" />
     </task>
+    <task id="LOCAL-00001" summary="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块">
+      <option name="closed" value="true" />
+      <created>1718192275086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718192275086</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/trigger/job/ThreadPoolDataReportJob.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoConfig.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="1" />
+          <line>51</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

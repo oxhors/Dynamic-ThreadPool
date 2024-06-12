@@ -20,9 +20,9 @@ dynamic:
         # 状态；true = 开启、false 关闭
         enabled: true
         # redis host
-        host: 127.0.0.1
+        host: 192.168.91.100
         # redis port
-        port: 16379
+        port: 6379
 
 # 日志
 #logging:

@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wx.domain.model.ThreadPoolEntity;
+import org.wx.domain.model.ThreadPoolConfigEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +25,11 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService{
     }
 
     @Override
-    public List<ThreadPoolEntity> queryThreadPoolList() {
-        List<ThreadPoolEntity> res = new ArrayList<>();
+    public List<ThreadPoolConfigEntity> queryThreadPoolList() {
+        List<ThreadPoolConfigEntity> res = new ArrayList<>();
         //Set<String> threadPoolName = threadPoolExecutorMap.keySet();
         for (Map.Entry<String, ThreadPoolExecutor> threadPoolExecutorEntry : threadPoolExecutorMap.entrySet()) {
-            ThreadPoolEntity threadPoolEntity = new ThreadPoolEntity(appName, threadPoolExecutorEntry.getKey());
+            ThreadPoolConfigEntity threadPoolEntity = new ThreadPoolConfigEntity(appName, threadPoolExecutorEntry.getKey());
             ThreadPoolExecutor threadPool = threadPoolExecutorEntry.getValue();
 
             getThreadPoolEntityFromThreadPool(threadPoolEntity, threadPool);
@@ -40,7 +40,7 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService{
     }
 
     @Override
-    public ThreadPoolEntity queryThreadPoolByName(String threadPoolName) {
+    public ThreadPoolConfigEntity queryThreadPoolByName(String threadPoolName) {
         if(Strings.isBlank(threadPoolName)){
             logger.info("线程池名称不能为空!");
             return null;
@@ -54,30 +54,30 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService{
             logger.info("不存在名为{}的线程池",threadPoolName);
             return null;
         }
-        ThreadPoolEntity threadPoolEntity = new ThreadPoolEntity(appName, threadPoolName);
+        ThreadPoolConfigEntity threadPoolEntity = new ThreadPoolConfigEntity(appName, threadPoolName);
         getThreadPoolEntityFromThreadPool(threadPoolEntity, target);
         logger.info("名为{}的线程池的配置信息为:{}",threadPoolName, JSON.toJSONString(threadPoolEntity));
         return threadPoolEntity;
     }
 
     @Override
-    public void updateThreadPoolConfig(ThreadPoolEntity threadPoolEntity) {
-        if(threadPoolEntity == null || !appName.equals(threadPoolEntity.getAppName())) return ;
-        ThreadPoolExecutor poolExecutor = threadPoolExecutorMap.get(threadPoolEntity.getThreadPoolName());
+    public void updateThreadPoolConfig(ThreadPoolConfigEntity threadPoolConfigEntity) {
+        if(threadPoolConfigEntity == null || !appName.equals(threadPoolConfigEntity.getAppName())) return ;
+        ThreadPoolExecutor poolExecutor = threadPoolExecutorMap.get(threadPoolConfigEntity.getThreadPoolName());
         if(poolExecutor == null) return;
 
         //设置核心线程数，最大线程数..TODO
-        poolExecutor.setCorePoolSize(threadPoolEntity.getCorePoolSize());
-        poolExecutor.setMaximumPoolSize(threadPoolEntity.getMaxPoolSize());
+        poolExecutor.setCorePoolSize(threadPoolConfigEntity.getCorePoolSize());
+        poolExecutor.setMaximumPoolSize(threadPoolConfigEntity.getMaximumPoolSize());
 
 
     }
 
-    private void getThreadPoolEntityFromThreadPool(ThreadPoolEntity threadPoolEntity, ThreadPoolExecutor threadPool) {
+    private void getThreadPoolEntityFromThreadPool(ThreadPoolConfigEntity threadPoolEntity, ThreadPoolExecutor threadPool) {
         threadPoolEntity.setPoolSize(threadPool.getPoolSize());
         threadPoolEntity.setCorePoolSize(threadPool.getCorePoolSize());
-        threadPoolEntity.setMaxPoolSize(threadPool.getMaximumPoolSize());
-        threadPoolEntity.setActiveCnt(threadPool.getActiveCount());
+        threadPoolEntity.setMaximumPoolSize(threadPool.getMaximumPoolSize());
+        threadPoolEntity.setActiveCount(threadPool.getActiveCount());
         threadPoolEntity.setQueueSize(threadPool.getQueue().size());
         threadPoolEntity.setQueueType(threadPool.getQueue().getClass().getSimpleName());
         threadPoolEntity.setRemainingCapacity(threadPool.getQueue().remainingCapacity());
