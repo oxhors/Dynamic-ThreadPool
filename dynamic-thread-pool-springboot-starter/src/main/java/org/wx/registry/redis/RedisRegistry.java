@@ -18,14 +18,13 @@ public class RedisRegistry implements IRegistry {
     public RedisRegistry(RedissonClient redissonClient) {
         this.redissonClient = redissonClient;
     }
-
     @Override
     public void reportThreadPoolEntities(List<ThreadPoolConfigEntity> threadPoolEntities) {
         RList<ThreadPoolConfigEntity> list = redissonClient.getList(RegistryEnumVO.THREAD_POOL_CONFIG_LIST_KEY.getKey());
         list.delete();
         list.addAll(threadPoolEntities);
     }
-
+    //某一个线程池的信息
     @Override
     public void reportThreadPoolConfigEntity(ThreadPoolConfigEntity threadPoolConfigEntity) {
         String cacheKey = RegistryEnumVO.THREAD_POOL_CONFIG_PARAMETER_LIST_KEY.getKey() + "_" + threadPoolConfigEntity.getAppName() + "_" + threadPoolConfigEntity.getThreadPoolName();

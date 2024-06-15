@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd6bb329-f714-42c8-9798-84af30bf137f" name="更改" comment="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块">
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/model/ThreadPoolConfigEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/valobj/RegistryEnumVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/registry/IRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/registry/redis/RedisRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/trigger/job/ThreadPoolDataReportJob.java" afterDir="false" />
+    <list default="true" id="dd6bb329-f714-42c8-9798-84af30bf137f" name="更改" comment="引入redis作为第三方的中心节点，配置定时任务定时获取应用的线程池参数上报给redis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/config/DynamicThreadPoolAutoConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/DynamicThreadPoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/DynamicThreadPoolService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/IDynamicThreadPoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/IDynamicThreadPoolService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-springboot-starter/src/main/java/org/wx/domain/model/ThreadPoolEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/org/wx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/org/wx/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +114,9 @@
       <option name="presentableId" value="Default" />
       <updated>1718179363841</updated>
       <workItem from="1718179364899" duration="12644000" />
-      <workItem from="1718193169459" duration="8104000" />
+      <workItem from="1718193169459" duration="8580000" />
+      <workItem from="1718207309446" duration="11000" />
+      <workItem from="1718458570419" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块">
       <option name="closed" value="true" />
@@ -137,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718192275086</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="引入redis作为第三方的中心节点，配置定时任务定时获取应用的线程池参数上报给redis">
+      <option name="closed" value="true" />
+      <created>1718206074594</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718206074594</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="工程搭建，创建了两个模块，一个是核心的组件模块，以starter方式接入另一个demo模块" />
+    <MESSAGE value="引入redis作为第三方的中心节点，配置定时任务定时获取应用的线程池参数上报给redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入redis作为第三方的中心节点，配置定时任务定时获取应用的线程池参数上报给redis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

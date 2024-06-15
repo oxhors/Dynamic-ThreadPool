@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+import sun.nio.ch.ThreadPool;
 
 import java.util.concurrent.*;
 
@@ -69,6 +70,7 @@ public class ThreadPoolConfig {
                 break;
         }
 
+      //  ExecutorService
         // 创建线程池
         return new ThreadPoolExecutor(properties.getCorePoolSize(),
                 properties.getMaxPoolSize(),
